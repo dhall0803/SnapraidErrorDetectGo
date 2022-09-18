@@ -52,7 +52,7 @@ func main() {
 		log.Fatal(fmt.Sprintf("ERROR: %s", err))
 	}
 
-	if strings.Contains(string(output), "error") || strings.Contains(string(output), "Error") {
+	if strings.Contains(string(output), "No error detected.") {
 		message := "WARNING: Snapraid error detected!"
 		log.Println(message)
 		sendTelegramNotification(message)
