@@ -11,8 +11,8 @@ import (
 )
 
 func parseEnvFile(path string) map[string]string {
-	var outputMap map[string]string
-	f, err := os.Open("path")
+	outputMap := map[string]string{}
+	f, err := os.Open(path)
 	if err != nil {
 		log.Println("WARNING: Error opening .env file: \n" + err.Error())
 	}
