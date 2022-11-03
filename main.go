@@ -111,7 +111,9 @@ func main() {
 		message := "WARNING: Snapraid error detected!"
 		log.Println(message)
 		sendTelegramNotification(token, chatId, message)
+		os.Exit(2)
 	} else {
 		log.Println("INFO: No snapraid errors detected")
+		os.Exit(0)
 	}
 }
